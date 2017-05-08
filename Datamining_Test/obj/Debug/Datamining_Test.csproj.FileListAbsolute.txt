@@ -1,0 +1,7 @@
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\bin\Debug\Datamining_Test.dll
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\bin\Debug\Datamining_Test.pdb
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\bin\Debug\nunit.framework.dll
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\bin\Debug\nunit.framework.xml
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\obj\Debug\Datamining_Test.csprojResolveAssemblyReference.cache
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\obj\Debug\Datamining_Test.dll
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining_Test\obj\Debug\Datamining_Test.pdb
