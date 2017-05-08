@@ -1,1 +1,7 @@
 C:\Users\Theko\Desktop\Datamining\Datamining\bin\Debug\Datamining.exe.config
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\bin\Debug\Datamining.exe.config
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\bin\Debug\Datamining.exe
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\bin\Debug\Datamining.pdb
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\obj\Debug\Datamining.csprojResolveAssemblyReference.cache
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\obj\Debug\Datamining.exe
+C:\Users\Theko\OneDrive\Dokumenter\GitHub\datamining\Datamining\obj\Debug\Datamining.pdb

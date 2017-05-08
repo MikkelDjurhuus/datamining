@@ -10,6 +10,8 @@ namespace Datamining
     {
         static void Main(string[] args)
         {
+            Console.Write("abe");
+            Console.Read();
         }
     }
 }

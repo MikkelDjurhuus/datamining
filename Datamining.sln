@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datamining", "Datamining\Datamining.csproj", "{B913F1AC-F636-4208-9740-95F5C2AA37F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datamining_Test", "Datamining_Test\Datamining_Test.csproj", "{26DD641A-AABD-4448-972C-BB286FB42711}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B913F1AC-F636-4208-9740-95F5C2AA37F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B913F1AC-F636-4208-9740-95F5C2AA37F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B913F1AC-F636-4208-9740-95F5C2AA37F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DD641A-AABD-4448-972C-BB286FB42711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DD641A-AABD-4448-972C-BB286FB42711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DD641A-AABD-4448-972C-BB286FB42711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DD641A-AABD-4448-972C-BB286FB42711}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
