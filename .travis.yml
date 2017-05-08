@@ -3,3 +3,4 @@ solution: ./Datamining.sln
 install:
   - nuget # lets get version number
   - nuget restore ./Datamining.sln -Verbosity detailed
+  - nuget update ./Datamining.sln -Verbosity detailed
