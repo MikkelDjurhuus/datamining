@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using Datamining;
 
 namespace Datamining_Test
 {
@@ -9,8 +10,8 @@ namespace Datamining_Test
         [Test]
         public void TestMethod1()
         {
-            int i = 1;
-            Assert.AreEqual(i + 1, 2);
+            bool a = Program.TestFunction();
+            Assert.AreEqual(a, true);
         }
     }
 }
