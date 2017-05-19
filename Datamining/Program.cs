@@ -90,7 +90,7 @@ namespace Datamining
             // The files used in this example are created in the topic 
             // How to: Write to a Text File. You can change the path and 
             // file name to substitute text files of your own. 
-            string sourceDirectory = "C:/Users/Theko/Desktop/books";
+            string sourceDirectory = "C:/bin/files";
 
             var txtFiles = Directory.EnumerateFiles(sourceDirectory, "*.txt");
             foreach (string currentFile in txtFiles)
@@ -116,7 +116,7 @@ namespace Datamining
                                 _cityIDs += id + ",";
                             }
                             string _book = _title + @"\" + _author + @"\" + _cityIDs;
-                            StreamWriter outputFile = new StreamWriter("C:/Users/Theko/Desktop/books.txt", true);
+                            StreamWriter outputFile = new StreamWriter("C:/bin/books.txt", true);
                             outputFile.WriteLine(_book);
                             outputFile.Close();
                         }
@@ -124,7 +124,7 @@ namespace Datamining
                 }
                 catch (Exception e)
                 {
-                    StreamWriter outputFile = new StreamWriter("C:/Users/Theko/Desktop/booksLog.txt", true);
+                    StreamWriter outputFile = new StreamWriter("C:/bin/booksLog.txt", true);
                     outputFile.WriteLine(e);
                     outputFile.Close();
                 }
