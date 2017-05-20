@@ -93,32 +93,43 @@ namespace Datamining
             string sourceDirectory = "C:/bin/files";
 
             var txtFiles = Directory.EnumerateFiles(sourceDirectory, "*.txt");
+            int _bookID = 1;
             foreach (string currentFile in txtFiles)
             {
                 Console.WriteLine(currentFile);
                 try
                 {
-                    StreamReader myFile = new StreamReader(currentFile);
+                    StreamReader myFile = new StreamReader(currentFile, Encoding.UTF8);
                     string input = myFile.ReadToEnd();
                     myFile.Close();
 
-                    string _title = GetTitle(input);
-                    if (_title != "Unknown")
+                    string _title = GetTitle(input).Replace('"', '\'');
+                    if (_title != "Unknown" && _title != "")
                     {
-                        string _author = GetAuthor(input);
                         List<int> _cities = GetCities(input);
+                        _cities.Remove(22888);
                         if (_cities.Count > 0)
                         {
-                            _cities = _cities.Distinct().ToList();
-                            string _cityIDs = "";
+                            string _author = GetAuthor(input).Replace('"', '\'');
+                            if (_author == "")
+                            {
+                                _author = "Unknown";
+                            }
+                            //string _cityIDs = "";
+                            StreamWriter ouputMentioned = new StreamWriter("C:/bin/mentioned.csv", true, Encoding.UTF8);
                             foreach (int id in _cities)
                             {
-                                _cityIDs += id + ",";
+                                string _mentioned = '"' + _bookID.ToString() + '"' + ',' + '"' + id.ToString() + '"';
+                                ouputMentioned.WriteLine(_mentioned);
+                                // _cityIDs += id + ",";
                             }
-                            string _book = _title + @"\" + _author + @"\" + _cityIDs;
-                            StreamWriter outputFile = new StreamWriter("C:/bin/books.txt", true);
+                            ouputMentioned.Close();
+                            //string _book = '"' + _title + '"' + ',' + '"' + _author + '"' + ',' + '"' + _cityIDs.Remove(_cityIDs.Length - 1) + '"';
+                            string _book = '"' + _bookID.ToString() + '"' + ',' + '"' + _title + '"' + ',' + '"' + _author + '"';
+                            StreamWriter outputFile = new StreamWriter("C:/bin/book.csv", true, Encoding.UTF8);
                             outputFile.WriteLine(_book);
                             outputFile.Close();
+                            _bookID++;
                         }
                     }
                 }
@@ -162,10 +173,10 @@ namespace Datamining
             }
             try
             {
-                foreach (Match m in Regex.Matches(input, pattern))
-                {
-                    Task.Run(() => CheckCities(m.Value.Trim()));
-                }
+                Parallel.ForEach(Regex.Matches(input, pattern).OfType<Match>(), (m) =>
+                 {
+                     CheckCities(m.Value.Trim());
+                 });
                 return matches;
             }
             catch (Exception e)
@@ -175,15 +186,13 @@ namespace Datamining
             }
         }
 
-        static async Task<bool> CheckCities(string name)
+        static void CheckCities(string name)
         {
             City city = cities.Find(c => c.name == name);
             if (city != null)
             {
                 matches.Add(city.id);
-                return await Task.FromResult(true);
             }
-            return await Task.FromResult(false);
         }
 
 
